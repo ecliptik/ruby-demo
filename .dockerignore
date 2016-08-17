@@ -1,0 +1,4 @@
+.git
+*.yml
+.env.export
+*.swp

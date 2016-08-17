@@ -1,0 +1,17 @@
+ruby-demo-lb:
+  ports:
+  - 20010:9292/tcp
+  tty: true
+  image: rancher/load-balancer-service
+  links:
+  - ruby-demo
+  stdin_open: true
+  labels:
+    io.rancher.scheduler.global: 'true'
+ruby-demo:
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.container.start_once: 'true'
+  tty: true
+  image: ecliptik/ruby-demo
+  stdin_open: true

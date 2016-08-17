@@ -1,0 +1,6 @@
+ruby-demo:
+  tty: true
+  build: .
+  stdin_open: true
+  ports:
+    - "9292:9292"
