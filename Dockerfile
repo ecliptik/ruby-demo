@@ -4,15 +4,12 @@ MAINTAINER Micheal Waltz <mwaltz@demandbase.com>
 #Set environment vars
 ENV APP_DIR /app
 
-#Copy Gemfile for gem install
+#Copy Gemfile
 RUN mkdir -p ${APP_DIR}
 WORKDIR ${APP_DIR}
 COPY Gemfile ${APP_DIR}
 
-## Install build packages, bundle packages locally, using the GITHUB_TOKEN
-## for caching, and then unsetting GITHUB_TOKEN so the Gemfile vendors the
-## cached gems. Removing the virtual package causes this layer to zero-out
-## significantly reducing the size of the image
+## Install build packages
 RUN apk --no-cache add \
         --virtual build-dependencies \
         build-base \
