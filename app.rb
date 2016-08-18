@@ -13,7 +13,5 @@ gifs = ["https://raw.githubusercontent.com/ecliptik/gifs/master/agent-cooper-cof
 #Output random gif
 get "/" do
   gif = gifs.sample
-  #@gordonTheTurtle wuz here!
-  gif = "https://pbs.twimg.com/profile_images/744363201538592768/apXFmrb-.jpg"
   "<img src=\"#{gif}\">"
 end
