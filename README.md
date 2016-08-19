@@ -3,8 +3,9 @@ Simple demo ruby app for SDDevops Rancher presentation.
 
 Uses [Sinatra](http://www.sinatrarb.com/) to define a single route.
 
-* /
-- display a random gif
+## Routes
+- /
+  - display a random gif
 
 # Deploy Locally
 
